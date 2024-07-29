@@ -1,3 +1,4 @@
+https://www.acmicpc.net/problem/5597
 const fs = require("fs");
 const inputs = fs.readFileSync("input.txt").toString().split("\n");
 
