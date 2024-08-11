@@ -1,16 +1,11 @@
-const fs = require("fs");
-const inputs = fs.readFileSync("input.txt").toString().split("\n");
-
-const cnt = inputs[0];
 
 const solution = () => {
-  
-  for (let i = 1; i <= cnt; i++) {
-    const textArr = inputs[i].replace('\r','').split("");
-    const firstLetter = textArr[0];
-    const lastLetter = textArr[textArr.length - 1];
-    console.log(`${firstLetter}${lastLetter}`);
-  }
+  console.log(`         ,r'"7`);
+  console.log("r`-_   ,'  ,/");
+  console.log(" \\. \". L_r'");
+  console.log('   `~\\/');
+  console.log("      |");
+  console.log("      |");
 }
 
 solution();
