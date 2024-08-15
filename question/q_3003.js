@@ -1,3 +1,5 @@
+// https://www.acmicpc.net/problem/3003
+
 
 const fs = require("fs");
 const inputs = fs.readFileSync("input.txt").toString().split(" ").map((v) => parseInt(v));
