@@ -1,7 +1,5 @@
-const fs = require('fs');
-let input = fs.readFileSync('input.txt').toString();
+// https://www.acmicpc.net/problem/3003
 
-let n = Number(input);
 
 const fs = require("fs");
 const inputs = fs.readFileSync("input.txt").toString().split(" ").map((v) => parseInt(v));
