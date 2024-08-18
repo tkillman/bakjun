@@ -1,3 +1,4 @@
+// https://www.acmicpc.net/problem/10988
 const fs = require('fs');
 const input = fs.readFileSync('input.txt').toString().trim();
 
