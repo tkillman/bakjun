@@ -1,52 +1,27 @@
 const fs = require('fs');
-const input = fs.readFileSync('/dev/stdin').toString().trim().split("\n");
-
-const toScoreByGrade = (grade) => {
-  switch(grade){
-    case "A+":
-      return 4.5;
-    case "A0":
-      return 4;
-    case "B+":
-      return 3.5;
-    case "B0":
-      return 3;
-    case "C+":
-      return 2.5;
-    case "C0":
-      return 2;
-    case "D+":
-      return 1.5;
-    case "D0":
-      return 1;
-    case "F":
-      return 0;
-    default:
-      return 0.0;
-  }
-}
+const input = fs.readFileSync('input.txt').toString().trim().split("\n");
+let maxNum = 0;
+let x = 0;
+let y = 0;
 
 const solution = () => {
-  let totalRowScore = 0;
-  let totalScore = 0;
- 
+
   for (let i = 0; i < input.length; i++) {
-    const row = input[i].split(" ");
+    const row = input[i].split(" ").map(Number);
 
-    //const subject = row[0];
-    const score = Number(row[1]);
-    const grade = String(row[2]).trim();
+    for (let j = 0; j < row.length; j++) {
+      const value = row[j];
 
-    if (grade === "P") {
-      continue;
+      if (maxNum <= value) {
+        maxNum = value;
+        x = i + 1;
+        y = j + 1;
+      }
     }
-
-    const rowScore = score * toScoreByGrade(grade);
-    totalRowScore += rowScore;
-    totalScore += score;
   }
 
-  console.log(totalRowScore / totalScore);  
-}
+  console.log(maxNum);
+  console.log(`${x} ${y}`);
+}  
 
 solution();
