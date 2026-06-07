@@ -1,12 +1,10 @@
 const printFn = (num) => {
-  const str = new Promise((resolve) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       console.log("num :: ", num);
       resolve(num);
     }, 0);
   });
-
-  return str;
 };
 
 const solution = () => {
